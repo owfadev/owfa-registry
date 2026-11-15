@@ -9,11 +9,18 @@ The official package index of the [vault-wiki](https://github.com/owfadev/owfa) 
 
 | Package | Version | Compat | Contents | Trust | Summary |
 |---|---|---|---|---|---|
-| [cuhksz](https://github.com/owfadev/pkg-cuhksz) | 0.2 | ≥ 0.2 | cuhksz · bb · bb-map · bb-track · bb-teach · bb-quiz · sis · registry | framework-bundled | CUHK-SZ school domain — bb course ops · sis records · registry |
-| [lark](https://github.com/owfadev/pkg-lark) | 0.2 | ≥ 0.2 | lark · lark-docs · lark-im · lark-calendar | framework-bundled | Feishu/Lark domain — docs · im · calendar |
-| [email](https://github.com/owfadev/pkg-email) | 0.2 | ≥ 0.2 | email | framework-bundled | personal mailbox domain — mail-cli |
-| [bili](https://github.com/owfadev/pkg-bili) | 0.2 | ≥ 0.2 | bili | framework-bundled | bilibili content domain — bili-cli |
-| [project](https://github.com/owfadev/pkg-project) | 0.2 | ≥ 0.2 | project | framework-bundled | project container domain |
+| [personal](https://github.com/owfadev/owfa-personal) | 0.1.3 | ≥ 0.4 | 21 members (protocol: vaultwiki, default) | framework-bundled | OWFA personal suite — the default protocol package; purely local · no credentials |
+| [project](https://github.com/owfadev/owfa-project) | 0.1.1 | ≥ 0.4.5 | project/decisions/journal/index/check/owfadevelop (protocol: project) | framework-bundled | project PROTOCOL — supervised-development workspace; ABI face since 0.1.1 |
+| [bridge](https://github.com/owfadev/owfa-bridge) | 0.3.1 | ≥ 0.4.6 | bridge | framework-bundled | cross-workspace references — read-only toward targets, write path = jurisdiction switch |
+| [cuhksz](https://github.com/owfadev/owfa-cuhksz) | 0.2.1 | ≥ 0.2 | cuhksz · bb · bb-map · bb-track · bb-teach · bb-quiz · sis · registry | framework-bundled | CUHK-SZ school domain — bb course ops · sis records · registry |
+| [lark](https://github.com/owfadev/owfa-lark) | 0.2 | ≥ 0.2 | lark · lark-docs · lark-im · lark-calendar | framework-bundled | Feishu/Lark domain — docs · im · calendar |
+| [email](https://github.com/owfadev/owfa-email) | 0.2 | ≥ 0.2 | email | framework-bundled | personal mailbox domain — mail-cli |
+| [bili](https://github.com/owfadev/owfa-bili) | 0.5 | ≥ 0.2 | bili · bili-pet | framework-bundled | bilibili content domain — bili-cli · optional raised-risk member bili-pet |
+| [github](https://github.com/owfadev/owfa-github) | 0.2 | ≥ 0.3 | github | framework-bundled | GitHub state cache domain with system gh connector and offline reads |
+| [diary](https://github.com/owfadev/owfa-diary) | 0.3 | ≥ 0.2 | diary | framework-bundled | personal diary zone — vault-backed daily entries |
+| [qq](https://github.com/owfadev/owfa-qq) | 0.3.0 | ≥ 0.3 | qq | framework-bundled | Official QQ Bot domain — qq-cli WebSocket intake |
+
+> The table is a human-readable mirror — [INDEX.yaml](INDEX.yaml) is the machine source of truth; when they disagree, INDEX wins and the table needs a PR.
 
 ## Registering a package
 
