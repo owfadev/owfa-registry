@@ -25,6 +25,14 @@ One PR, one line in `INDEX.yaml`:
 
 The PR **is** the human-review gate (issue #12 security faces: `inject` text is a constitution-level instruction channel; connectors hold credentials and execute code). Review checks: manifest shape, members == family closure, connector disclosure. On merge: listed in `list-remote`, installable without `--yes`.
 
+### Release discipline (per version bump)
+
+`kernel install` fetches the package repo at tag `<name>-v<version>`; without the tag the row is uninstallable (hit in the wild: bridge 0.3.0 shipped without `bridge-v0.3.0`). Every INDEX version bump MUST have, in the package repo at PR time:
+
+1. tag `<name>-v<version>` pushed at the reviewed commit — REQUIRED: it is the only ref `kernel install` fetches (`git clone --branch <name>-v<version>`); a missing tag makes the row uninstallable (hit in the wild: bridge 0.3.0 shipped without `bridge-v0.3.0`);
+2. a `commit:` SHA pin in the INDEX row is an additional post-clone verification anchor — install refuses the clone when HEAD != pin; it never substitutes for the tag;
+3. INDEX row `version` == the tag's/PKG.yaml version (kernel refuses the mismatch at install).
+
 Landing rules are mechanical, not editorial — where a plugin lives follows its `depends`:
 
 | Your plugin is… | It lands… |
