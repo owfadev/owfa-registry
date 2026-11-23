@@ -1,6 +1,8 @@
 # vault-wiki package index — what `kernel install/list-remote` resolve against (issue #20)
 # trust: framework-bundled (built & reviewed in-org via the normal PR flow) / reviewed-3rd-party (an index PR is the human-review gate)
 # members: slash-separated — install verifies index row ↔ PKG.yaml roster consistency
+# provides: optional, comma-separated capability ids the package's transports contract serves (e.g. qq.transport) — cross-package discovery; the kernel does not match on it mechanically yet (work order #56)
+# harness: optional, absent = universal (any harness can use it); a harness-locked package declares its id honestly (e.g. openclaw) and health checks surface the mismatch
 packages:
   cuhksz: {repo: https://github.com/owfadev/owfa-cuhksz, version: 0.4.4, compat: ">= 0.5.2", trust: framework-bundled, commit: 7440bbdb738b2c1c34a6e6ace5abb7b80f78b8f3, members: cuhksz/bb/bb-map/bb-track/bb-teach/bb-quiz/sis/sis-course/registry, summary: CUHK-SZ school domain — bb course ops · sis records · registry; connector cuhksz-cli 0.4.4 (read-only sis Class Search incl. --all-sections, advisory sis-course member, appt unit-limits Max/Min fix, split term defaults + Summer guard)}
   lark:   {repo: https://github.com/owfadev/owfa-lark,   version: 0.2.1, compat: ">= 0.2", trust: framework-bundled, commit: 3badf8b5bd5b0bf460841a4d9470045a8fd64892, compat: ">= 0.2", trust: framework-bundled, members: lark/lark-docs/lark-im/lark-calendar, summary: Feishu/Lark domain — docs · im · calendar}

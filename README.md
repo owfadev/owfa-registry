@@ -22,6 +22,13 @@ The official package index of the [vault-wiki](https://github.com/owfadev/owfa) 
 
 > The table is a human-readable mirror — [INDEX.yaml](INDEX.yaml) is the machine source of truth; when they disagree, INDEX wins and the table needs a PR.
 
+## Optional row fields (work order #56)
+
+- `provides:` — comma-separated capability ids the package serves through its `transports:` contract (e.g. `qq.transport`). Cross-package discovery data; absent on most packages today.
+- `harness:` — **absent = universal** (any harness on this machine can drive the package's connectors). A harness-locked package declares its id honestly (e.g. `openclaw`); universal is the first class, locked packages register without shame and health checks surface the mismatch instead of failing silently.
+
+Both are optional scalars; one-line PR here is still the gate.
+
 ## Registering a package
 
 One PR, one line in `INDEX.yaml`:
